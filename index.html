@@ -1,52 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Title -->
     <title>white Analog Clock</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
     <!-- Css -->
-    <link rel="stylesheet" href="./style.css">
-    <!-- Script -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Scripts -->
     <script defer src="./app.js"></script>
-</head>
+    <script defer src="./digitalClock.js"></script>
+  </head>
 
-<body>
-
-
+  <body>
     <header>
-        <p>Click on the clock to play sound effect</p>
+      <p>Click on the clock to play sound effect</p>
     </header>
     <article>
-        <p>Analog Clock</p>
+      <p>Analog Clock</p>
     </article>
     <main>
-        <div class="container">
-            <div class="clock">
+      <div class="container">
+        <div class="clock">
+          <div class="hours__wrapper"></div>
+          <div class="seconds__wrapper"></div>
 
-                <div class="hours__wrapper"></div>
-                <div class="seconds__wrapper"></div>
-
-                <div class="hands__wrapper">
-                    <div class="hand hour"><i></i></div>
-                    <div class="hand minute"><i></i></div>
-                    <div class="hand second"><i></i></div>
-                </div>
-            </div>
+          <div class="hands__wrapper">
+            <div class="hand hour"><i></i></div>
+            <div class="hand minute"><i></i></div>
+            <div class="hand second"><i></i></div>
+          </div>
         </div>
-        <footer>
-            <div id="digitalClock">-- : -- : --</div>
-            <div class="time">
-                <span id="displayDay"></span>
-                <span id="displayFullDate"></span>
-            </div>
-        </footer>
+      </div>
+      <footer>
+        <div id="digitalClock">-- : -- : --</div>
+        <div class="time">
+          <span id="displayDay"></span>
+          <span id="displayFullDate"></span>
+        </div>
+      </footer>
     </main>
-
-
-</body>
-
+  </body>
 </html>
