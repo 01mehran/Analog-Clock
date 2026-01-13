@@ -1,3 +1,5 @@
+"use stric";
+
 const displayDay = document.querySelector("#displayDay");
 const displayFullDate = document.querySelector("#displayFullDate");
 
