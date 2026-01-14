@@ -1,5 +1,6 @@
 "use stric";
 
+// Select elenents;
 const displayDay = document.querySelector("#displayDay");
 const displayFullDate = document.querySelector("#displayFullDate");
 
@@ -19,6 +20,7 @@ const months = [
   "November",
   "December",
 ];
+
 const weekdays = [
   "Sunday",
   "Monday",
@@ -29,23 +31,29 @@ const weekdays = [
   "Saturday",
 ];
 
+// Show name of day;
 displayDay.innerHTML = `${weekdays[time.getDay()]}`;
-const day = time.getDate() < 10 ? "0" + time.getDate() : time.getDate();
+
+// Get current date;
+const currentDate = time.getDate() < 10 ? `0${time.getDate()}` : time.getDate();
+
 displayFullDate.innerHTML = `/ ${
   months[time.getMonth()]
-} / ${day} / ${time.getFullYear()}`;
+} / ${currentDate} / ${time.getFullYear()} `;
 
+// Digital clock;
 setInterval(() => {
   const time = new Date();
+
   const digitalClock = document.querySelector("#digitalClock");
 
-  const hour = time.getHours();
-  const minute = time.getMinutes();
-  const second = time.getSeconds();
+  const hours = time.getHours();
+  const minutes = time.getMinutes();
+  const seconds = time.getSeconds();
 
-  const currentHour = hour < 10 ? "0" + hour : hour;
-  const currentMinute = minute < 10 ? "0" + minute : minute;
-  const currentSecond = second < 10 ? "0" + second : second;
+  const currentHours = hours < 10 ? `0${hours}` : hours;
+  const currentMinutes = minutes < 10 ? `0${minutes}` : minutes;
+  const currentSeconds = seconds < 10 ? `0${seconds}` : seconds;
 
-  digitalClock.innerHTML = `${currentHour} : ${currentMinute} : ${currentSecond}`;
+  digitalClock.innerHTML = `${currentHours} : ${currentMinutes} : ${currentSeconds}`;
 }, 1000);

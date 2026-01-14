@@ -34,7 +34,7 @@ const Time = () => {
 
   hour.style.transform = `rotate(${currentHours * 30 + currentMinutes / 2}deg)`;
   minute.style.transform = `rotate(${currentMinutes * 6}deg)`;
-
   seconds.style.transform = `rotate(${currentSeconds * 6}deg)`;
 };
+
 setInterval(Time, 1000);

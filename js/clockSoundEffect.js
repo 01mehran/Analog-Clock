@@ -2,6 +2,7 @@
 
 let soundInterval = null;
 let isSoundOn = false;
+
 container.addEventListener("click", () => {
   isSoundOn = !isSoundOn;
 
@@ -9,6 +10,7 @@ container.addEventListener("click", () => {
     if (soundInterval) {
       clearInterval(soundInterval);
     }
+
     soundInterval = setInterval(() => {
       const clockSound = new Audio("../assets/sound.wav");
       clockSound.play();

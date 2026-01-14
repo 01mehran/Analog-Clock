@@ -14,7 +14,7 @@
 }
 
 body {
-  overflow: hidden;
+  overflow-y: hidden;
   font-family: "EB Garamond", serif;
   font-weight: 500;
   display: flex;
