@@ -1,10 +1,16 @@
 "use strict";
 
+// Components;
 import { handleDigitalClock } from "./digitalClock.js";
 
-// Selecting Elements;
-const hoursWrapper = document.querySelector(".hours__wrapper");
-const secondsWrapper = document.querySelector(".seconds__wrapper");
+// Elements;
+import {
+  hour,
+  hoursWrapper,
+  minute,
+  seconds,
+  secondsWrapper,
+} from "./elements.js";
 
 // ---------------------- Create hours number;
 let hoursNumberWrapper = [];
@@ -23,9 +29,6 @@ for (let i = 1; i <= 60; i += 1) {
 secondsWrapper.insertAdjacentHTML("afterbegin", secondsBarWrapper.join(""));
 
 // ------------------ Time;
-const hour = document.querySelector(".hour");
-const minute = document.querySelector(".minute");
-const seconds = document.querySelector(".second");
 
 const Time = () => {
   const date = new Date();

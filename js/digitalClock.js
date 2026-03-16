@@ -1,10 +1,8 @@
 "use stric";
 
-export const handleDigitalClock = () => {
-  // Select elenents;
-  const displayDay = document.querySelector("#displayDay");
-  const displayFullDate = document.querySelector("#displayFullDate");
+import { digitalClock, displayDay, displayFullDate } from "./elements.js";
 
+export const handleDigitalClock = () => {
   const time = new Date();
 
   const months = [
@@ -46,8 +44,6 @@ export const handleDigitalClock = () => {
   // Digital clock;
   setInterval(() => {
     const time = new Date();
-
-    const digitalClock = document.querySelector("#digitalClock");
 
     const hours = time.getHours();
     const minutes = time.getMinutes();

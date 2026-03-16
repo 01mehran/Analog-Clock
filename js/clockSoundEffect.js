@@ -1,5 +1,7 @@
 "use stric";
 
+import { container } from "./elements.js";
+
 let soundInterval = null;
 let isSoundOn = false;
 
