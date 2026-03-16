@@ -1,34 +1,13 @@
 "use stric";
 
+// Utils;
+import { months, weekdays } from "../utils/data.js";
+
+// elements;
 import { digitalClock, displayDay, displayFullDate } from "./elements.js";
 
 export const handleDigitalClock = () => {
   const time = new Date();
-
-  const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-
-  const weekdays = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
 
   // Show name of day;
   displayDay.innerHTML = `${weekdays[time.getDay()]}`;
