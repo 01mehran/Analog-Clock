@@ -1,9 +1,10 @@
 "use strict";
 
+import { handleDigitalClock } from "./digitalClock.js";
+
 // Selecting Elements;
 const hoursWrapper = document.querySelector(".hours__wrapper");
 const secondsWrapper = document.querySelector(".seconds__wrapper");
-const container = document.querySelector(".container");
 
 // ---------------------- Create hours number;
 let hoursNumberWrapper = [];
@@ -38,3 +39,5 @@ const Time = () => {
 };
 
 setInterval(Time, 1000);
+
+handleDigitalClock();
