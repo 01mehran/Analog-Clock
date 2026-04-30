@@ -1,11 +1,9 @@
 "use stric";
 
-import { container } from "./elements.js";
-
 let soundInterval = null;
 let isSoundOn = false;
 
-container.addEventListener("click", () => {
+export function handleClockSoundEffect() {
   isSoundOn = !isSoundOn;
 
   if (isSoundOn) {
@@ -21,4 +19,4 @@ container.addEventListener("click", () => {
     clearInterval(soundInterval);
     soundInterval = null;
   }
-});
+}

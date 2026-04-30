@@ -5,7 +5,8 @@ import { handleDigitalClock } from "./digitalClock.js";
 import { Time } from "./Time.js";
 
 // Elements;
-import { hoursWrapper, secondsWrapper } from "./elements.js";
+import { container, hoursWrapper, secondsWrapper } from "./elements.js";
+import { handleClockSoundEffect } from "./clockSoundEffect.js";
 
 // ---------------------- Create hours number;
 let hoursNumberWrapper = [];
@@ -27,3 +28,5 @@ secondsWrapper.insertAdjacentHTML("afterbegin", secondsBarWrapper.join(""));
 setInterval(Time, 1000);
 
 handleDigitalClock();
+
+container.addEventListener("click", handleClockSoundEffect);
